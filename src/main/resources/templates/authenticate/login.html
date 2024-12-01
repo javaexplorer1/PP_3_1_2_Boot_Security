@@ -64,15 +64,6 @@
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" required/>
             <br/>
-            <div th:each="role, iterStat : ${roles}">Roles:
-                <label>
-                    <input type="checkbox"
-                           th:name="roles"
-                           th:value="${role.id}"
-                           th:checked="${user.roles != null && user.roles.contains(role)}"/>
-                    <span th:text="${role.getRole()}"></span>
-                </label>
-            </div>
         </fieldset>
         <br/>
         <input type="submit" value="Login"/>
